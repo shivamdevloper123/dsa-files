@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Merge in While loop</title>
+    <script> 
+  
+       /* let A = [2, 4, 6, 12, 43, 56, 58];
+let B = [3, 5, 17, 29];
+let mergedArray = [];
+
+let i = 0; // Pointer for array A
+let j = 0; // Pointer for array B
+
+// Merge arrays while both arrays have elements left
+while (i < A.length && j < B.length) {
+    if (A[i] < B[j]) {
+        mergedArray.push(A[i]);
+        i++;
+    } else {
+        mergedArray.push(B[j]);
+        j++;
+    }
+}
+
+// If there are remaining elements in A, add them to mergedArray
+while (i < A.length) {
+    mergedArray.push(A[i]);
+    i++;
+}
+
+// If there are remaining elements in B, add them to mergedArray
+while (j < B.length) {
+    mergedArray.push(B[j]);
+    j++;
+}
+
+console.log(mergedArray);*/
+
+let A = [2, 4, 6, 12, 43, 56, 58];
+let B = [3, 5, 17, 29];
+let mergedArray = [];
+
+let i = 0; // Pointer for array A
+let j = 0; // Pointer for array B
+let k = 0; // Pointer for mergedArray
+
+// Merge arrays while both arrays have elements left
+while (i < A.length && j < B.length) {
+    if (A[i] < B[j]) {
+        mergedArray[k] = A[i];
+        i++;
+    } else {
+        mergedArray[k] = B[j];
+        j++;
+    }
+    k++;
+}
+
+// If there are remaining elements in A, add them to mergedArray
+while (i < A.length) {
+    mergedArray[k] = A[i];
+    i++;
+    k++;
+}
+
+// If there are remaining elements in B, add them to mergedArray
+while (j < B.length) {
+    mergedArray[k] = B[j];
+    j++;
+    k++;
+}
+
+console.log(mergedArray);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
